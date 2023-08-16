@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import GetFireBaseAdmin from "../lib/firebase";
+import GetFireBaseAdmin from "../../lib/firebase";
 export const AuthContext = createContext(null);
 
 function Context({ children }) {
