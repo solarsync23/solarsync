@@ -3,6 +3,7 @@ import { getAuth, browserLocalPersistence, setPersistence, sendPasswordResetEmai
 import { getFirestore } from 'firebase/firestore';
 import 'firebase/firestore';
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyDWB1MKXgQzFtPsktHoNL7OOUUO10qpteU",
     authDomain: "solar-sync-10056.firebaseapp.com",
