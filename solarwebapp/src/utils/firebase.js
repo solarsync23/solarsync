@@ -1,4 +1,4 @@
-import {initializeApp} from "firebase-admin/app";
+import {initializeApp} from "firebase/app";
 import { getAuth, browserLocalPersistence, setPersistence, sendPasswordResetEmail} from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import 'firebase/firestore';
