@@ -1,23 +1,7 @@
-import { initializeApp, getApp } from "firebase/app";
-import {
-  GoogleAuthProvider,
-  getAuth,
-  signInWithPopup,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
-  confirmPasswordReset,
-  signOut,
-} from "firebase/auth";
-import {
-  getFirestore,
-  query,
-  getDocs,
-  collection,
-  where,
-  addDoc,
-} from "firebase/firestore";
-
+import {initializeApp} from "firebase-admin/app";
+import { getAuth, browserLocalPersistence, setPersistence, sendPasswordResetEmail} from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDWB1MKXgQzFtPsktHoNL7OOUUO10qpteU",
@@ -28,96 +12,23 @@ const firebaseConfig = {
     appId: "1:5897650664:web:72fdd98265560d70fee45d",
     measurementId: "G-K4TDF7E5DJ",
     databaseURL: "https://solar-sync-10056-default-rtdb.firebaseio.com/"
+  
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const sendPasswordReset = async (email) => {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    alert("Password reset link sent!");
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
 };
 
-const GetFireBaseAdmin = () => {
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    return { app, auth, db };
-  };
-  
-  const signInWithGoogle = async (auth, db) => {
-    try {
-      const googleProvider = new GoogleAuthProvider();
-      const res = await signInWithPopup(auth, googleProvider);
-      const user = res.user;
-      const q = query(collection(db, "users"), where("uid", "==", user?.uid));
-      const docs = await getDocs(q);
-      if (docs.docs.length === 0) {
-        await addDoc(collection(db, "users"), {
-          uid: user?.uid,
-          name: user?.displayName,
-          authProvider: "google",
-          email: user?.email,
-          photoURL: user?.photoURL || "",
-        });
-      }
-      return { status: true };
-    } catch (err) {
-      return { status: false, err: err };
-    }
-  };
-  
-  const registerWithEmailAndPassword = async (auth, db, name, email, password) => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password)
-        .then(async function (result) {
-          const user = result.user;
-          await addDoc(collection(db, "users"), {
-            uid: user?.uid,
-            name,
-            authProvider: "local",
-            email,
-            photoURL: user?.photoURL || "",
-          });
-          return { status: true };
-        })
-        .catch(function (error) {
-          return { status: false, err: err };
-        });
-    } catch (err) {
-      return { status: false, err: err };
-    }
-  };
-  
-  const logInWithEmailAndPassword = async (auth, email, password) => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      return { status: true, message: "Success" };
-    } catch (err) {
-      return { status: false, err: err };
-    }
-  };
-  
-  const sendPasswordReset = async (auth, email) => {
-    try {
-      await sendPasswordResetEmail(auth, email);
-      return { status: true };
-    } catch (err) {
-      return { status: false, err: err };
-    }
-  };
-  const ResetPasswordByLink = async (auth, code, newPassword) => {
-    try {
-      await confirmPasswordReset(auth, code, newPassword);
-      return { status: true };
-    } catch (err) {
-      return { status: false, err: err };
-    }
-  };
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export { sendPasswordReset };
 
-  const logout = (auth) => {
-    signOut(auth);
-    return { status: true };
-};
-
-    export {
-        signInWithGoogle,
-        logInWithEmailAndPassword,
-        logout,
-        registerWithEmailAndPassword,
-        sendPasswordReset,
-        ResetPasswordByLink,
-    };
-export default GetFireBaseAdmin;
+setPersistence(auth, browserLocalPersistence)

@@ -17,7 +17,7 @@ const LoginPage = () => {
     
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
-        router.push('/preferences');
+        // router.push('/preferences');
         toast.success("Logged in successfully");
     }).catch((error) => {
         const errorMessage = "Invalid email/password";
