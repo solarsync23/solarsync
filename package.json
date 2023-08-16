@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@firebase/app": "^0.9.15",
+    "firebase": "^10.1.0",
+    "firebaseui": "^6.1.0",
+    "next": "^13.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
