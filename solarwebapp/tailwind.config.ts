@@ -10,6 +10,9 @@ const config: Config = {
     colors:{
       'electric-green':'#8EFFC2',
       'darkblue':'#031141',
+      'lightgrey':'#d1d5db',
+      'white':'#f8fafc',
+      'black':'#030712'
     },
     extend: {
       backgroundImage: {
