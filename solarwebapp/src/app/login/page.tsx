@@ -30,48 +30,46 @@ const LoginPage = () => {
 
 
   return (
-    <div className='flex flex-col justify-centers items-center bg-darkblue'>
+    <div className='h-screen flex flex-col justify-around items-center bg-darkblue'>
       <Logo/>
-      <div className="flex justify-center items-center h-screen bg-gradient-to-b from-indigo-950 to-indigo-900">
+      <div className="w-full flex justify-center items-center bg-gradient-to-b from-indigo-950 to-indigo-900">
         <div className="w-full max-w-md">
           <h2 className="text-peach text-2xl text-center font-bold mb-4">Log In</h2>
-          <form onSubmit={handleLogin}>
-            <div className="mb-4">
-              <label htmlFor="email" className="block mb-1">Email Address</label>
+          <form onSubmit={handleLogin}
+          className='flex-center flex-col p-4'
+          >
               <input
+              placeholder='Email Address'
                 type="email"
                 id="email"
-                className="bg-peach text-black w-full px-4 py-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300"
+                className="input-field w-full focus:outline-none focus:ring focus:border-blue-300"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="password" className="text-peach block mb-1">Password</label>
               <input
+              placeholder='password'
                 type="password"
                 id="password"
-                className="bg-peach text-black w-full px-4 py-2 rounded border-gray-300 focus:outline-none focus:ring focus:border-blue-300"
+                className="w-full input-field focus:outline-none focus:ring focus:border-blue-300"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-            </div>
               <button
                 type="button"
-                className="text-white hover:text-white"
+                className="text-white w-full text-center m-2 hover:text-white"
                 onClick={() =>router.push("/reset")}
               >
                 Forgot Password?
               </button>
-            <div className="flex-col justify-center items-center mt-4">
-              <button type="submit" className="w-full py-2 bg-indigo-900 text-white rounded hover:bg-indigo-800">
+            <div className="w-full flex-col justify-center items-center mt-4">
+              <button type="submit" className="button-pill">
                 Log In
               </button>
-              <button>Register</button>
+              <button className='button-pill'>Register</button>
             </div>
-            <button>Continue as guest</button>
+            <button className='w-full text-center m-2'>Continue as guest</button>
           </form>
     
         </div>

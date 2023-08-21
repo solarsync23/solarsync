@@ -25,3 +25,24 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components {
+  .button-pill{
+    @apply flex justify-center w-full rounded-full py-2 px-4 p-4 bg-darkblue border border-white border-solid m-4 hover:button-hover
+  }
+
+  .button-hover{
+    @apply bg-electric-green text-darkblue border-none
+
+  }
+
+  .input-field{
+    @apply border-b border-white text-white bg-darkblue p-2
+  }
+
+  .flex-center{
+    @apply flex justify-center items-center
+  }
+
+
+}
