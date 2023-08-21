@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import '../../utils/firebase';
+import 'solarwebapp/src/utils/firebase.js';
 import { useRouter } from 'next/navigation';
 
 
