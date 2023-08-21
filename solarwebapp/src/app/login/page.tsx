@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import '../../utils/firebase';
 import { useRouter } from 'next/navigation';
+<<<<<<< HEAD
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Logo from '../../components/Logo/Logo';
+=======
+>>>>>>> 9c0e2467377c4c56893d74ee19c031234c3fed1d
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -18,11 +21,12 @@ const LoginPage = () => {
     
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
-        // router.push('/preferences');
-        toast.success("Logged in successfully");
+        router.push('/preferences');
+        console.log(user);
+
     }).catch((error) => {
         const errorMessage = "Invalid email/password";
-        toast.error(errorMessage);
+        console.log(errorMessage);
     });
     
 };
