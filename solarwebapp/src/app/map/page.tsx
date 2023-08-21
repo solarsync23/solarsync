@@ -37,7 +37,7 @@ function mapPage() {
         <div className='w-full flex-center flex-col'>
             <button className='button-pill text-white w-48 border-none'>List View</button>
         </div>
-            <Navbar/>
+            <Navbar activePage='map'/>
     </div>
     )
 }
