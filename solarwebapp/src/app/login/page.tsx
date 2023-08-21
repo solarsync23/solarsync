@@ -1,11 +1,9 @@
 "use client"
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import '../../utils/firebase';
+import 'solarwebapp/src/utils/firebase.js';
 import { useRouter } from 'next/navigation';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Logo from '../../components/Logo/Logo';
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -74,7 +72,6 @@ const LoginPage = () => {
           </form>
     
         </div>
-        <ToastContainer />
       </div>
     </div>
   );
