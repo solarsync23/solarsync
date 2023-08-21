@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import '../../utils/firebase';
+import '/src/utils/firebase.js';
+
 import { useRouter } from 'next/navigation';
 
 
@@ -61,7 +62,6 @@ const LoginPage = () => {
             </button>
           </div>
         </form>
-  
       </div>
     </div>
   );
