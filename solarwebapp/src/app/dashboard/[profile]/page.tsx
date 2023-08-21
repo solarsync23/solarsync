@@ -1,60 +1,64 @@
 import React from 'react';
 import {FaBell} from 'react-icons/fa';
 import Navbar from '@/components/Navbar/Navbar';
-import Image from 'next/image';
 import '../../globals.css';
+import {AiOutlineHeart, AiOutlineClockCircle,AiOutlineMenu } from 'react-icons/ai';
+import {TbSunLow} from 'react-icons/tb';
+import {HiMagnifyingGlass} from 'react-icons/hi2';
 
 
 function dashboardPage({params}: any) {
     const user = params.profile;
 
-    const quickActions = [
-        {
-            'text':'Saved chargers',
-            'src':'/images/save.png',
-            'alt':'charger'
-        },
-        {
-            'text':'Rent your spot',
-            'src':'/images/rent.png',
-            'alt':'blue car charging'
-        },
-        {
-            'text':'Your bookings',
-            'src':'/images/book.png',
-            'alt':'parked car'
-        }
-    ];
+    const buttonStyle = 'flex-center bg-lightblue rounded-md p-2'
 
     return (
-        <div className='bg-white'>
+        <div className='py-2 px-4 bg-lightgrey'>
             {/* header  */}
-            <div className='flex justify-between m-2'>
+            <div className='flex justify-between p-2'>
                 <h1 className='text-black'>Good morning, {user}</h1>
                 <div className='flex'>
                     <FaBell size='1.5rem' className='text-black'/>
-                    <div className='rounded-full bg-lightgrey w-8 h-8'>
+                    <div className='rounded-full w-8 h-8'>
                 </div>
                 </div>
             </div>
-            <div className='text-black h-96'> map </div>
+            {/**Search bar */}
+            <form 
+            className='rounded-full bg-white p-2 flex justify-around mb-2'
+            >
+                <HiMagnifyingGlass size='1.5rem' className='text-lightgrey'/>
+                <input placeholder='search location or station'/>
+                <div className='rounded-full w-8 h-8 bg-darkblue text-white flex-center'>
+                    <AiOutlineMenu/>
+                </div>
+            </form>
             {/**Quick actions */}
             <div className='flex justify-between'>
-                {
-                    quickActions.map((action,i)=>{
-                        return (
-                            <button key={i}
-                            style={{backgroundImage: `url('${action.src}')`}}
-                            className='text-white bg-cover bg-center rounded-xl h-32 w-24 flex justify-end items-end'
-                            >
-                                {action.text}
-                            </button>
-                        )
-                    })
-                }
+                <button
+                className={buttonStyle}
+                > 
+                    <AiOutlineHeart className='mr-2'/>
+                    Saved
+                </button>
+                <button
+                className={buttonStyle}
+                > 
+                    <AiOutlineClockCircle className='mr-2'/>
+                    Recent
+                </button>
+                <button
+                className={buttonStyle}
+                > 
+                    <TbSunLow className='mr-2'/>
+                    Solar
+                </button>
             </div>
-
-            <Navbar/>
+            <div className='text-black h-96'> map </div>
+            <div className='w-full flex-center flex-col'>
+                <button className='button-pill text-white w-48'>List View</button>
+            </div>
+                <Navbar/>
 
         </div>
     )

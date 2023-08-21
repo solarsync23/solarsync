@@ -5,16 +5,14 @@ import {IoPersonOutline} from 'react-icons/io5';
 
 function Navbar() {
 
-    const iconSize = '2rem';
-    const iconStyle = 'p-2';
-
+    const iconSize = '1.5rem';
     
     return (
-        <div className='flex rounded-full py-2 px-4 padding-2rem bg-darkblue'>
-            <ul className='flex w-full justify-between px-6'>
-                <li><VscMap size={iconSize}/></li>
-                <li><LuPlug size={iconSize}/></li>
-                <li><IoPersonOutline size={iconSize}/></li>
+        <div className='flex rounded-full bg-darkblue px-8 my-4'>
+            <ul className='flex w-full justify-between text-white'>
+                <li className='p-4 nav-active'><VscMap size={iconSize}/></li>
+                <li className='p-4 '><LuPlug size={iconSize}/></li>
+                <li className='p-4'><IoPersonOutline size={iconSize}/></li>
             </ul>
         </div>
     )
