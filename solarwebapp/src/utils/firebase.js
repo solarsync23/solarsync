@@ -12,7 +12,7 @@ const firebaseConfig = {
     messagingSenderId: "5897650664",
     appId: "1:5897650664:web:72fdd98265560d70fee45d",
     measurementId: "G-K4TDF7E5DJ",
-    databaseURL: "https://solar-sync-10056-default-rtdb.firebaseio.com/"
+    // databaseURL: "https://solar-sync-10056-default-rtdb.firebaseio.com/"
   
 };
 // Initialize Firebase
