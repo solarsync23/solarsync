@@ -3,12 +3,9 @@ import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import '../../utils/firebase';
 import { useRouter } from 'next/navigation';
-<<<<<<< HEAD
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Logo from '../../components/Logo/Logo';
-=======
->>>>>>> 9c0e2467377c4c56893d74ee19c031234c3fed1d
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +31,7 @@ const LoginPage = () => {
 
 
   return (
-    <div className='h-screen flex flex-col justify-around items-center bg-darkblue'>
+    <div className='h-screen flex flex-col justify-around items-center bg-darkblue text-white'>
       <Logo/>
       <div className="w-full flex justify-center items-center bg-gradient-to-b from-indigo-950 to-indigo-900">
         <div className="w-full max-w-md">
