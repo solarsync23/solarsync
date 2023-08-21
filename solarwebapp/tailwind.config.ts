@@ -13,7 +13,7 @@ const config: Config = {
       'lightblue':'#EEF1FC',
       'darkgrey':'#52525b',
       'lightgrey':'#d1d5db',
-      'white':'#f8fafc',
+      'white':'#ffffff',
       'black':'#030712'
     },
     extend: {
