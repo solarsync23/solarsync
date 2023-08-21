@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import 'solarwebapp/src/utils/firebase.js';
+import '../../utils/firebase';
 import { useRouter } from 'next/navigation';
 
 
@@ -11,7 +11,7 @@ const LoginPage = () => {
   const router = useRouter();
   const handleLogin = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    const auth = getAuth();
+  const auth = getAuth();
 
     
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
