@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import '/src/utils/firebase.js';
+import Logo from '@/components/Logo/Logo';
 
 import { useRouter } from 'next/navigation';
 
@@ -25,7 +26,7 @@ const LoginPage = () => {
 };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gradient-to-b from-indigo-950 to-indigo-900">
+    <div className="flex justify-center items-center h-screen bg-darkblue">
       <div className="w-full max-w-md">
         <h2 className="text-peach text-2xl text-center font-bold mb-4">Log In</h2>
         <form onSubmit={handleLogin}>
