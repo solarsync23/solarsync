@@ -9,10 +9,12 @@ const config: Config = {
   theme: {
     colors:{
       'electric-green':'#8EFFC2',
+      'lightgreen':'#D4FAE5',
       'darkblue':'#031141',
       'lightblue':'#EEF1FC',
+      'darkgrey':'#52525b',
       'lightgrey':'#d1d5db',
-      'white':'#f8fafc',
+      'white':'#ffffff',
       'black':'#030712'
     },
     extend: {
