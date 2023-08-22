@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import '../../globals.css';
 import Image from 'next/image';
 import {AiFillStar} from 'react-icons/ai';
-
+import InfoBox from '@/components/InfoBox/InfoBox';
 
 
 
@@ -18,7 +18,7 @@ function dashboardPage({params}: any) {
         'verification':'passport',
         'loan':'GB*UBI*E123456|Type2',
         'ev':'Audi A3 sportsback S Line',
-        'solarcredit':'10|£0.10',
+        'solarcredit':'100',
         'leaderboard':'Rank#123'
     }
 
@@ -38,31 +38,25 @@ function dashboardPage({params}: any) {
                     className='mr-2'/>
                     <div>
                         <div className='flex justify-start item-center'>
-                            <p className='capitalize font-bold'>{user}</p>
+                            <p className='capitalize font-bold'>Jessica</p>
                             <p className='text-darkgrey text-xs flex-center ml-2'> <AiFillStar/> 5.0</p>
                         </div>
                         <p>View profile</p>
                     </div>
                 </div>
+                <h2 className='py-2'>Solar syncing</h2>
+                <div className='p-4 rounded-lg bg-white'>
+                    <InfoBox section='solar credits' content={userInfo.solarcredit} href=''/>
+                    <InfoBox section='leaderboard' content={userInfo.leaderboard} href='/leaderboard'/>
+                </div>
                 <h2 className='py-2'>Account settings</h2>
                 <div className='p-4 rounded-lg bg-white capitalize'>
-                    <p className='text-darkgrey'>personal information</p>
-                    <p className='text-darkblue'>{userInfo.personal}</p>
-                    <p className='text-darkgrey'>payment methods</p>
-                    <p className='text-darkblue'>{userInfo.payment}</p>
-                    <p className='text-darkgrey'>verification</p>
-                    <p className='text-darkblue'>{userInfo.verification}</p>
-                    <p className='text-darkgrey'>loan your home charger</p>
-                    <p className='text-darkblue'>{userInfo.loan}</p>
-                    <p className='text-darkgrey'>your EV</p>
-                    <p className='text-darkblue'>{userInfo.ev}</p>
-                </div>
-                <h2 className='py-2'>Solar syncing</h2>
-                <div className='p-4 capitalize rounded-lg bg-white'>
-                    <p className='text-darkgrey'>solar credits</p>
-                    <p className='text-darkblue'>{userInfo.solarcredit}</p>
-                    <p className='text-darkgrey'>leaderboard</p>
-                    <p className='text-darkblue'>{userInfo.leaderboard}</p>
+                <InfoBox section='personal information' content={userInfo.personal} href='/leaderboard'/>
+                <InfoBox section='payment methods' content={userInfo.payment} href='/leaderboard'/>
+                <InfoBox section='leaderboard' content={userInfo.leaderboard} href='/leaderboard'/>
+                <InfoBox section='verification' content={userInfo.verification} href='/leaderboard'/>
+                <InfoBox section='loan your home charger' content={userInfo.loan} href='/leaderboard'/>
+                <InfoBox section='your EV' content={userInfo.ev} href='/leaderboard'/>
                 </div>
             </div>
                 <Navbar activePage='profile'/>

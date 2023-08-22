@@ -2,6 +2,7 @@ import React from 'react';
 import LeaderBox from '@/components/LeaderBox/LeaderBox';
 import {AiOutlineMenu} from 'react-icons/ai';
 import {BsArrowLeft} from 'react-icons/bs';
+import Link from 'next/link';
 
 function leaderPage() {
     const leaders = [
@@ -36,7 +37,7 @@ function leaderPage() {
         <div className='bg-lightgrey'>
             {/** header */}
             <div className='p-4 flex justify-between items-center'>
-                <BsArrowLeft/>
+                <Link href="/dashboard/profile"><BsArrowLeft/></Link>
                 <h1 className='text-center'>LeaderBoard</h1>
                 <AiOutlineMenu/>
             </div>
