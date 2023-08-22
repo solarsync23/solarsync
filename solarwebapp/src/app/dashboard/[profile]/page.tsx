@@ -46,7 +46,7 @@ function dashboardPage({params}: any) {
                 </div>
                 <h2 className='py-2'>Solar syncing</h2>
                 <div className='p-4 rounded-lg bg-white'>
-                    <InfoBox section='solar credits' content={userInfo.solarcredit} href=''/>
+                    <InfoBox section='solar credits' content={userInfo.solarcredit} href='/solarcredit'/>
                     <InfoBox section='leaderboard' content={userInfo.leaderboard} href='/leaderboard'/>
                 </div>
                 <h2 className='py-2'>Account settings</h2>

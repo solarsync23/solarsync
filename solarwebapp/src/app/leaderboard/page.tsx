@@ -3,6 +3,7 @@ import LeaderBox from '@/components/LeaderBox/LeaderBox';
 import {AiOutlineMenu} from 'react-icons/ai';
 import {BsArrowLeft} from 'react-icons/bs';
 import Link from 'next/link';
+import Header from '@/components/Header/Header';
 
 function leaderPage() {
     const leaders = [
@@ -35,12 +36,11 @@ function leaderPage() {
     ]
     return (
         <div className='bg-lightgrey'>
-            {/** header */}
-            <div className='p-4 flex justify-between items-center'>
-                <Link href="/dashboard/profile"><BsArrowLeft/></Link>
-                <h1 className='text-center'>LeaderBoard</h1>
-                <AiOutlineMenu/>
-            </div>
+            <Header
+            title='leaderboard'
+            href='/dashboard/profile'
+            icon={ <AiOutlineMenu/>}
+            />
             <div className='rounded-full py-2 px-6 mx-8 my-4 bg-white flex justify-between capitalize'>
                 <button className='capitalize'>all time</button>
                 <button className='capitalize'>this month</button>
