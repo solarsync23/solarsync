@@ -10,7 +10,7 @@ type headerProp = {
 
 const Header:React.FC<headerProp> = ({title, href, icon}) => {
     return (
-        <div className='p-4 flex justify-between items-center bg-lightgrey '>
+        <div className='p-4 flex justify-between items-center'>
             <Link href={href}><BsArrowLeft/></Link>
             <h1 className='text-center'>LeaderBoard</h1>
             {icon}
