@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Logo from '../../components/Logo/Logo';
+import Link from 'next/link';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +35,6 @@ const LoginPage = () => {
       <Logo/>
       <div className="w-full flex justify-center items-center bg-gradient-to-b from-indigo-950 to-indigo-900">
         <div className="w-full max-w-md">
-          <h2 className="text-peach text-2xl text-center font-bold mb-4">Log In</h2>
           <form onSubmit={handleLogin}
           className='flex-center flex-col p-4'
           >
@@ -61,17 +61,16 @@ const LoginPage = () => {
                 className="text-white w-full text-center m-2 hover:text-white"
                 onClick={() =>router.push("/reset")}
               >
-                Forgot Password?
+                Forgotten password?
               </button>
             <div className="w-full flex-col justify-center items-center mt-4">
-              <button type="submit" className="button-pill">
+              <button type="submit" className="button-pill text-white">
                 Log In
               </button>
-              <button className='button-pill'>Register</button>
+              <button className='button-pill text-white'>Register</button>
             </div>
-            <button className='w-full text-center m-2'>Continue as guest</button>
+            <Link href='/map' className='w-full text-center m-2 text-white'>Continue as guest</Link>
           </form>
-    
         </div>
         <ToastContainer />
       </div>
