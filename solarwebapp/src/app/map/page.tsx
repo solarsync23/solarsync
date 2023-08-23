@@ -9,10 +9,9 @@ import Image from 'next/image';
 function mapPage() {
 
     const buttonStyle = 'flex-center bg-lightblue rounded-md p-2';
-    const address = '1600 Amphitheatre Parkway, Mountain View, CA'
 
     return (
-        <div className='py-2 px-4 h-screen '>
+        <div className='py-2 px-4 h-screen bg-lightgrey'>
         {/**Search bar */}
         <div className='mt-4'>
         <SearchBar/>
@@ -39,13 +38,12 @@ function mapPage() {
         </div>
 
         </div>
-        <div className='h-96 -z-10 w-full flex-center'>
+        <div className='flex-center w-full'>
             <Image
             src='/images/map.png'
-            width={600}
-            height={300}
+            width={350}
+            height={200}
             alt='map'
-            className='relative -z-10 bg-lightgrey'
             />
         </div>
         <div className='w-full flex-center flex-col'>
