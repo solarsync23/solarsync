@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext, createContext,useState, useRef, useEffect } from 'react'
-import { auth } from '../utils/firebase'
+import { auth } from '/src/utils/firebase.js';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
 
 
