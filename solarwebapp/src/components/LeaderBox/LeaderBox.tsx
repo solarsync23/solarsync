@@ -1,10 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 
 type UserLeader = {
     name: string;
     status: string;
     rank: number;
     score: number;
+    img: any;
 }
 
 interface LeaderProp {
@@ -12,9 +14,18 @@ interface LeaderProp {
 }
 
 const LeaderBox: React.FC<LeaderProp> =({userLeader}) => {
+
+
     return (
-        <div className='bg-white flex justify-start border-b border-lightgrey border-solid p-2'>
-            <div className='rounded-full w-8 h-8 bg-lightgrey mr-2 flex-center'></div>
+        <div className='bg-white flex justify-start border-b border-lightgrey border-solid p-2 text-darkblue'>
+                <div className='flex items-center justify-start '>
+                    <Image
+                    src={userLeader.img}
+                    width={38}
+                    height={38}
+                    alt='avatar'
+                    className='mr-2 rounded-full'/>
+                </div>
             <div className='w-full mx-2 flex justify-between'>
                 <div>
                     <p>{userLeader.name}</p>

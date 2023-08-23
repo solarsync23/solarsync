@@ -12,10 +12,10 @@ const config: Config = {
       'lightgreen':'#D4FAE5',
       'darkblue':'#031141',
       'lightblue':'#EEF1FC',
-      'darkgrey':'#52525b',
-      'lightgrey':'#d1d5db',
+      'darkgrey':'#7C7E83',
+      'lightgrey':'#F0F0F0',
       'white':'#ffffff',
-      'black':'#030712'
+      'black':'#313648'
     },
     extend: {
       backgroundImage: {
