@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "@react-google-maps/api": "^2.19.2",
+    "@types/googlemaps": "3.39.13",
+    "@types/markerclustererplus": "2.1.33",
     "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
+    "@types/react": "16.9.49",
     "@types/react-dom": "18.2.7",
     "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.15",
@@ -23,6 +27,7 @@
     "postcss": "8.4.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-maps": "9.4.5",
     "react-icons": "^4.10.1",
     "react-jsx": "^1.0.0",
     "react-router-dom": "^6.15.0",

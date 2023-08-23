@@ -85,12 +85,12 @@ function solarcreditPage() {
             </div>
             <div className='w-full m-2 flex justify-between'>
                 <div>
-                    <p className='text-lightgrey'>All time</p>
-                    <p className='text-darkgrey'>{userInfo.status}</p>
+                    <p className='text-darkgrey'>All time</p>
+                    <p className='text-black'>{userInfo.status}</p>
                 </div>
                 <div className='flex-col text-right'>
-                    <p className='text-lightgrey'>#{userInfo.rank}</p>
-                    <p className='text-darkgrey'>{userInfo.credit}credits</p>
+                    <p className='text-darkgrey'>#{userInfo.rank}</p>
+                    <p className='text-black'>{userInfo.credit}credits</p>
                 </div>
             </div>
         </div>

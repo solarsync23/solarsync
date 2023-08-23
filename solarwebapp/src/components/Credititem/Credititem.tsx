@@ -8,8 +8,8 @@ type creditProps = {
 
 const Credititem:React.FC<creditProps> = ({point, content,}) => {
     return (
-        <div className='p-4 flex justify-between  items-center'>
-            <p>{point}</p>
+        <div className='p-4 flex justify-between  items-center text-darkblue'>
+            <p className='text-darkgrey'>{point}</p>
             <div className='flex justify-start w-full ml-2'>
                 <p className='text-left text-sm pl-4'>{content}</p>
             </div>

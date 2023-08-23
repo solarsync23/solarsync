@@ -14,7 +14,7 @@ type InfoProp = {
 const InfoBox:React.FC<InfoProp> = ({section, content, href,noArrow, styleSection, styleContent}) => {
 
     return (
-        <Link href={href} className='capitalize flex justify-between items-center'>
+        <Link href={href} className='capitalize flex justify-between items-center text-darkblue'>
             <div className='py-2'>
                 <p className={`text-darkgrey ${styleSection}`}>{section}</p>
                 <p className={`text-darkblue ${styleContent}`}>{content}</p>
