@@ -11,4 +11,4 @@ SolarSync tackles these challenges by incentivizing EV drivers to connect with r
 
 ## Development Stack 🛠️
 - **Front-end:** React, Typescript, Tailwind CSS
-- **Back-end:** Firebase, Vercel, and SmartCar API
+- **Back-end:** Next.js, Firebase,Cloud Firestore Vercel, and SmartCar API
