@@ -1,21 +1,21 @@
 "use client"
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import '/src/utils/firebase.js';
 import Logo from '@/components/Logo/Logo';
 import Link from 'next/link';
 
 import { useRouter } from 'next/navigation';
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
-  const handleLogin = (e: { preventDefault: () => void; }) => {
+  const handleRegister = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     const auth = getAuth();
     
-    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
         router.push('/preferences');
     }).catch((error) => {
@@ -31,7 +31,7 @@ const LoginPage = () => {
       <Logo/>
       <div className="w-full flex justify-center items-center bg-gradient-to-b from-indigo-950 to-indigo-900">
         <div className="w-full max-w-md">
-          <form onSubmit={handleLogin}
+          <form onSubmit={handleRegister}
           className='flex-center flex-col p-4'
           >
               <input
@@ -61,10 +61,8 @@ const LoginPage = () => {
               </button>
             <div className="w-full flex-col justify-center items-center mt-4">
               <button type="submit" className="button-pill text-white">
-                Log In
+                Register
               </button>
-              <button className='button-pill text-white'
-                onClick={() => router.push("/register")} > Register </button>
             </div>
             <Link href='/map' className='w-full text-center m-2 text-white'>Continue as guest</Link>
           </form>
@@ -75,4 +73,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

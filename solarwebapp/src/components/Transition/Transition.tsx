@@ -13,7 +13,8 @@ const Transition = () => {
         setTimeout(() => {
             router.push('/login');
         }, 2000);
-    },[])
+    },[router])
+    
 
     return (
         <>
