@@ -1,14 +1,14 @@
-# SolarSync
-Find, rent, and charge to drive for a greener tomorrow.
+# SolarSync ☀️
+Find, Rent, and Charge for a Greener Tomorrow 🌍🚗⚡️
 
-[DEVPOST]() | [PITCH DECK](https://docs.google.com/presentation/d/1dxufNl88dOS6HAQ23oeHjk0XJ1lIa8P8bIBG1wljkv4/edit#slide=id.p) | [WIREFRAME](https://tinyurl.com/2ma2sar6)
+[Devpost]() | [Pitch Deck](https://docs.google.com/presentation/d/1dxufNl88dOS6HAQ23oeHjk0XJ1lIa8P8bIBG1wljkv4/edit?usp=sharing) | [Wireframe](https://tinyurl.com/2ma2sar6)
 
-## Motivation
-With the growing emphasis on sustainability, the main pillars of concern in EV production, such as energy source and infrastructure, are at the forefront. Traditional EV charging often relies on non-renewable grid energy, which can hinder the overall eco-friendliness of EVs. As highlighted by Elon Musk in July 2023, the U.S. is expected to see a significant surge in electricity consumption due to battery-powered vehicles, potentially tripling by 2045. This EV boom has the potential to strain the U.S. power grid. Additionally, current EV charging applications fall short in several areas. There's a lack of connectivity with a trusted network of verified EV chargers, difficulties in finding convenient and reliable charging stations, and a need for a more user-friendly and intuitive platform. 
+## Motivation 🌱
+In response to the growing emphasis on sustainability, SolarSync focuses on the key concerns in EV production, including energy sources and infrastructure. Traditional EV charging often relies on non-renewable grid energy, which can hinder the eco-friendliness of EVs. Elon Musk's projection in July 2023 highlights a potential tripling of U.S. electricity consumption due to battery-powered vehicles by 2045. This surge could strain the U.S. power grid. Furthermore, existing EV charging applications lack essential features. They lack connectivity to a reliable network of verified EV chargers, struggle with locating convenient and dependable charging stations, and lack a user-friendly and intuitive platform.
 
-## Solution
-SolarSync solves the above problem by encouraging EV drivers to connect with charging stations powered by renewable energy. This will be incentivised through a point system, where drivers earn solar credits every time they charge at a solar-powered station. Drivers with solar panels will be incentivised to loan their home chargers out by earning solar credits every time they receive a booking. Drivers can then use these credits towards their own charging.
+## Solution 💡
+SolarSync tackles these challenges by incentivizing EV drivers to connect with renewable energy-powered charging stations. A point system rewards drivers with solar credits for each charge at a solar-powered station. Home charger owners with solar panels can earn solar credits by lending out their chargers for bookings. These credits can then be utilized for personal charging needs.
 
-## How is SolarSync developed?
-- Front-end: React, Typescript, Tailwind CSS
-- Back-end: Firebase, Vercel, and SmartCar API
+## Development Stack 🛠️
+- **Front-end:** React, Typescript, Tailwind CSS
+- **Back-end:** Firebase, Vercel, and SmartCar API
