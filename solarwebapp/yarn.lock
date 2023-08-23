@@ -4802,6 +4802,11 @@ jstransform@^11.0.3:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
+jsx-react-utils@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.npmjs.org/jsx-react-utils/-/jsx-react-utils-1.0.11.tgz"
+  integrity sha512-Aiqm6jif38GT31KUhiXYocfuYO8XumJ0cto8m4TAFKn/T62K2ZIBha5Y/RswR8fEfC6u7HU04lDgBbXPfh1HFQ==
+
 kind-of@^6.0.2:
   version "6.0.3"
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
