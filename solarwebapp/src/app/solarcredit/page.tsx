@@ -97,16 +97,14 @@ function solarcreditPage() {
         <div className='m-2 capitalize'>
             <h2>earn credits</h2>
             <div className='rounded-md bg-white'>
-                {
-                    creditInfo.map((credit,i)=>{
-                        return (
-                            <Credititem
-                            point={credit.points}
-                            content={credit.content}
-                            />
-                        )
-                    })
-                }
+            {
+                creditInfo.map((credit,i)=>{
+                    return (
+                            <Credititem key={i} point={credit.points} content={credit.content} />
+                )
+            })
+        }
+
             </div>
         </div>
         <div className='m-2 capitalize'>

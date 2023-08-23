@@ -47,10 +47,10 @@ function leaderPage() {
                 <button className='capitalize'>this week</button>
             </div>
             <div className='bg-white p-4'>
-            {
-                leaders.map((leader,i)=>{
+                {
+                leaders.map((leader)=>{
                     return (
-                        <LeaderBox userLeader={leader}/>
+                        <LeaderBox key={leader.rank} userLeader={leader}/>
                     )
                 })
             }
